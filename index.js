@@ -9,6 +9,7 @@ const port = 5000;
 
 app.use(express.json())
 app.use(cors());
+app.use("/files", express.static("files"))
 
 //Available routes
 app.use("/api/auth", require('./routes/auth'))
